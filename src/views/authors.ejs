@@ -61,7 +61,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1>Book
+          <h1>Authors
             <p class="lead"></p>
           </h1>
         </div>
@@ -76,7 +76,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><!-- /cont -->
 
     <div class="container">
       <div class="row">
@@ -84,7 +84,7 @@
           <div class="top-spacer"> </div>
         </div>
       </div>
-    </div>
+    </div><!-- /cont -->
 
   </div>
 
@@ -99,44 +99,39 @@
 
 
 
-
-
-            <div class="row">
-              <br>
-              <div class="col-md-2 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=book.img%>" style="width:100px;height:100px"
-                    class="img-circle"></a>
-              </div>
-              <div class="col-md-10 col-sm-9">
-                <h3>
-                  <%=book.title%>
-                </h3>
-                <div class="row">
-                  <div class="col-xs-9">
-                    <h4><span class="label label-default">
-                        <%=book.author%>
-                      </span></h4>
-                    <h4>
-                      <small style="font-family:courier,'new courier';" class="text-muted">
-                        <%=book.genre%>
-                          •
-                      </small>
-                    </h4>
-                  </div>
-                  <div class="col-xs-3"></div>
-                </div>
-                <br><br>
-              </div>
-            </div>
-
-            <hr>
-
-
             <!--/stories-->
+            <%for(i=0;i<authors.length;i++){%>
+              <div class="row">
+                <br>
+                <div class="col-md-2 col-sm-3 text-center">
+                  <a class="story-title" href="#"><img alt="" src="/images/<%=authors[i].img%>"
+                      style="width:100px;height:100px" class="img-circle"></a>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <h3>
+                    <%=authors[i].author%>
+                  </h3>
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <!-- <h4><span class="label label-default"><%=authors[i].author%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=authors[i].genre%>   -->
+                      • <a href="/authors/<%=i%>" class="text-muted">Read More</a></small>
+                      </h4>
+                    </div>
+                    <div class="col-xs-3"></div>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
+              <%}%>
+                <hr>
 
 
-            <a href="/" class="btn btn-primary pull-right btnNext">More <i
-                class="glyphicon glyphicon-chevron-right"></i></a>
+                <!--/stories-->
+
+
+                <a href="/" class="btn btn-primary pull-right btnNext">More <i
+                    class="glyphicon glyphicon-chevron-right"></i></a>
 
 
           </div>
