@@ -19,7 +19,7 @@ function router(nav) {
 
             title: req.body.title,
             author: req.body.author,
-            genre: req.bodyy.genre,
+            genre: req.body.genre,
             image: req.body.image
         }
         var book = Bookdata(item);
